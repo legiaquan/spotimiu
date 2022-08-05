@@ -361,8 +361,8 @@ const app = {
         // render playlist
         this.render();
 
-        randomBtn.classList.toggle('active', this.isRandom);
-        repeatBtn.classList.toggle('active', this.isRepeat);
+        randomBtn.classList.toggle('active', this.isRandom ?? false);
+        repeatBtn.classList.toggle('active', this.isRepeat ?? false);
     }
 
 }
