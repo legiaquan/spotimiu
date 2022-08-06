@@ -17,11 +17,15 @@
   
   body {
     background-color: #f5f5f5;
+    -ms-overflow-style: none;
   }
+
+  body::-webkit-scrollbar {display: none;} /* Chrome, Safari and Opera */
   
   html {
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
+    scrollbar-width: none;
   }
   
   .player {

@@ -299,6 +299,29 @@ const app = {
                 }
             }
         }
+
+        // add event key up
+        onkeyup = (event) => {
+            if(event.code === "Space") {
+                document.body.style.overflow = "auto";
+                playBtn.click();
+            }
+
+            if(event.code === "ArrowRight") {
+                nextBtn.click();
+            }
+
+            if(event.code === "ArrowLeft") {
+                prevBtn.click();
+            }
+        };
+
+        // add event key down
+        onkeydown = (event) => {
+            if(event.code === "Space") {
+                document.body.style.overflow = "hidden";
+            }
+        }
     },
     loadCurrentSong : function() {
         heading.textContent = this.currentSong.name;
