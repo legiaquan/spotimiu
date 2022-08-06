@@ -15,6 +15,8 @@ const nextBtn = $('.btn-next');
 const prevBtn = $('.btn-prev');
 const randomBtn = $('.btn-random');
 const repeatBtn = $('.btn-repeat');
+const volume = $('#progress-volume');
+const iconVolume = $(".control-volume-group .btn-volume i");
 
 
 const app = {
@@ -22,6 +24,7 @@ const app = {
     isPlaying : false,
     isRandom : false,
     isRepeat : false,
+    volume : 1,
     config : JSON.parse(localStorage.getItem(PLAYER_STORAGE)) || {},
     setConfig : function(key, value) {
         this.config[key] = value;
@@ -272,6 +275,11 @@ const app = {
             }
         }
 
+        // change volume for songs
+        volume.onchange = function(e) {
+            _this.changeVolume(e.target.value / 100);
+        }
+
         // add event key up
         onkeyup = (event) => {
             if(event.code === "Space") {
@@ -345,9 +353,18 @@ const app = {
         this.currentIndex = newIndex;
         this.loadCurrentSong();
     },
+    changeVolume: function(value) {
+        this.setConfig('volume', value);
+        audio.volume = value;
+        let isMute = value == 0 ? true : false;
+
+        iconVolume.classList.toggle('fa-volume-mute', isMute);
+        iconVolume.classList.toggle('fa-volume-up', !isMute);
+    },
     loadConfig : function() {
         this.isRandom = this.config.isRandom;
         this.isRepeat = this.config.isRepeat;
+        this.volume = this.config.volume;
     },
     updateTitle : function(title) {
         document.title = `♥ SpotiMiu ♥ ${title}`;
@@ -376,8 +393,12 @@ const app = {
         // render playlist
         this.render();
 
+        // load volume
+        this.changeVolume(this.volume ?? 1);
+
         randomBtn.classList.toggle('active', this.isRandom ?? false);
         repeatBtn.classList.toggle('active', this.isRepeat ?? false);
+        volume.value = (this.volume ?? 1) * 100;
     }
 
 }

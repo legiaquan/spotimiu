@@ -25,26 +25,41 @@
     </div>
 
     <!-- Control -->
-    <div class="control">
-      <div class="btn btn-repeat">
-        <i class="fas fa-redo"></i>
+    <div class="control control-grid">
+      <div class="control-group-left">
+        <div class="btn btn-repeat">
+          <i class="fas fa-redo"></i>
+        </div>
+        <div class="btn btn-prev">
+          <i class="fas fa-step-backward"></i>
+        </div>
       </div>
-      <div class="btn btn-prev">
-        <i class="fas fa-step-backward"></i>
+      <div class="control-group-middle">
+        <div class="btn btn-toggle-play">
+          <i class="fas fa-pause icon-pause"></i>
+          <i class="fas fa-play icon-play"></i>
+        </div>
       </div>
-      <div class="btn btn-toggle-play">
-        <i class="fas fa-pause icon-pause"></i>
-        <i class="fas fa-play icon-play"></i>
-      </div>
-      <div class="btn btn-next">
-        <i class="fas fa-step-forward"></i>
-      </div>
-      <div class="btn btn-random">
-        <i class="fas fa-random"></i>
+      <div class="control-group-right">
+        <div class="btn btn-next">
+          <i class="fas fa-step-forward"></i>
+        </div>
+        <div class="btn btn-random">
+          <i class="fas fa-random"></i>
+        </div>
+  
+        
       </div>
     </div>
 
+    <div class="control control-volume-group">
+      <div class="btn btn-volume">
+        <i class="fas fa-volume-up"></i>
+        <input id="progress-volume" class="progress progress-volume" type="range" value="0" step="1" min="0" max="100">
+      </div>
+    </div>
     <input id="progress" class="progress" type="range" value="0" step="1" min="0" max="100">
+
 
     <audio id="audio" src=""></audio>
   </div>
