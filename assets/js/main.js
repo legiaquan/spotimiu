@@ -120,18 +120,6 @@ const app = {
             image: "./assets/img/vay-giu.png"
         },
         {
-            name: "Đảo không người",
-            singer: "Châu Bút Sướng (Bibi Zhou)",
-            path: "./assets/musics/DesertedIsland-BibiZhouChauButSuong-2787284.mp3",
-            image: "./assets/img/dao-khong-nguoi.png"
-        },
-        {
-            name: "Không bằng",
-            singer: "Đặng Thanh Tuyền",
-            path: "./assets/musics/KhongBang-DangThanhTuyen-7584140.mp3",
-            image: "./assets/img/khong-bang.png"
-        },
-        {
             name: "Mạc Vấn Quy Kỳ",
             singer: "莫问归期 - Tưởng Tuyết Nhi (Cher Chiang)",
             path: "./assets/musics/MacVanQuyKy-TuongTuyetNhiCherChiang-6128795.mp3",
