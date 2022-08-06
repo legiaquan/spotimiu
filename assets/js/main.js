@@ -224,33 +224,17 @@ const app = {
         }
 
         // next song
-        nextBtn.onclick = function(e) {
-            if(_this.isRandom) {
-                _this.playRandomSong();
-            } else {
-                _this.nextSong();
-            }
-
-            audio.play();
-            _this.render();
-            _this.scrollToActiveSong();
+        nextBtn.onclick = function() {
+            _this.playNextSong();
         }
 
         // prev song
-        prevBtn.onclick = function(e) {
-            if(_this.isRandom) {
-                _this.playRandomSong();
-            } else {
-                _this.prevSong();
-            }
-
-            audio.play();
-            _this.render();
-            _this.scrollToActiveSong();
+        prevBtn.onclick = function() {
+            _this.playPrevSong();
         }
         
         // random song
-        randomBtn.onclick = function(e) {
+        randomBtn.onclick = function() {
             _this.isRandom = !_this.isRandom;
             _this.setConfig('isRandom', _this.isRandom);
             randomBtn.classList.toggle('active', _this.isRandom);
@@ -268,7 +252,7 @@ const app = {
             if(_this.isRepeat) {
                 audio.play();
             } else {
-                nextBtn.click();
+                _this.playNextSong();
             }
         }
 
@@ -296,11 +280,11 @@ const app = {
             }
 
             if(event.code === "ArrowRight") {
-                nextBtn.click();
+                _this.playNextSong();
             }
 
             if(event.code === "ArrowLeft") {
-                prevBtn.click();
+                _this.playPrevSong();
             }
         };
 
@@ -318,12 +302,22 @@ const app = {
         this.updateTitle(this.currentSong.name);
 
     },
-    nextSong: function() {
+    nextSong : function() {
         this.currentIndex++;
         if(this.currentIndex >= this.songs.length) {
             this.currentIndex = 0;
         }
         this.loadCurrentSong();
+    },
+    playNextSong : function() {
+        if(this.isRandom) {
+            this.playRandomSong();
+        } else {
+            this.nextSong();
+        }
+        audio.play();
+        this.render();
+        this.scrollToActiveSong();
     },
     prevSong: function() {
         this.currentIndex--;
@@ -331,6 +325,16 @@ const app = {
             this.currentIndex = this.songs.length - 1;
         }
         this.loadCurrentSong();
+    },
+    playPrevSong : function() {
+        if(this.isRandom) {
+            this.playRandomSong();
+        } else {
+            this.prevSong();
+        }
+        audio.play();
+        this.render();
+        this.scrollToActiveSong();
     },
     playRandomSong : function() {
         let newIndex;
