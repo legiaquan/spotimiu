@@ -98,6 +98,12 @@
   
   /* CONTROL */
   .control {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 18px 0 8px 0;
+  }
+  .control.control-grid {
     display: grid;
     padding: 18px 0 8px 0;
     justify-content: center;
@@ -105,6 +111,15 @@
     grid-template-columns: calc(100% / 3) calc(100% / 3) calc(100% / 3);
   }
 
+  .control .btn-volume {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .control.control-volume-group {
+
+  }
 
   .control .control-group-left,
   .control .control-group-right,
@@ -126,6 +141,9 @@
 
   .control .btn.btn-volume {
     position: relative;
+    position: relative;
+    width: 100%;
+    padding: 15px 0;
   }
   
   .control .btn-toggle-play {
@@ -166,7 +184,7 @@
   
   /* PLAYLIST */
   .playlist {
-    margin-top: 408px;
+    margin-top: 480px;
     padding: 12px;
   }
   
