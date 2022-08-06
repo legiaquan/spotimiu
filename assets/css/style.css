@@ -98,10 +98,20 @@
   
   /* CONTROL */
   .control {
+    display: grid;
+    padding: 18px 0 8px 0;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: calc(100% / 3) calc(100% / 3) calc(100% / 3);
+  }
+
+
+  .control .control-group-left,
+  .control .control-group-right,
+  .control .control-group-middle {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding: 18px 0 8px 0;
   }
   
   .control .btn {
@@ -112,6 +122,10 @@
   
   .control .btn.active {
     color: var(--primary-color);
+  }
+
+  .control .btn.btn-volume {
+    position: relative;
   }
   
   .control .btn-toggle-play {
@@ -144,6 +158,10 @@
     height: 6px;
     background-color: var(--primary-color);
     cursor: pointer;
+  }
+
+  .progress.progress-volume {
+    -webkit-appearance: auto;
   }
   
   /* PLAYLIST */
