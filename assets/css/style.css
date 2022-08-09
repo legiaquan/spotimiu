@@ -291,5 +291,6 @@ header h2 {
 .btn-love i {
   font-size: 30px;
   color: #ee2c2c;
-  cursor: pointer;
+  cursor: -webkit-grab;
+  cursor: grab;
 }
