@@ -284,7 +284,7 @@ header h2 {
 
 .btn-love {
   position: fixed;
-  bottom: 120px;
+  bottom: 60px;
   right: calc(50% - 160px);
 }
 
