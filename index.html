@@ -1,73 +1,83 @@
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>~SpotiMiu~</title>
-<link rel="icon" href = 
-"./assets/img/mai-4-YBg1KLKp6vHxOE4G.png" 
-        type = "image/x-icon">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
-
-<div class="player">
-  <!-- Dashboard -->
-  <div class="dashboard">
-    <!-- Header -->
-    <header>
-      <h1>SpotiMiu</h1>
-      <h4>Now playing:</h4>
-      <h2>Có em bên đời bỗng vui</h2>
-    </header>
-
-    <!-- CD -->
-    <div class="cd">
-      <div class="cd-thumb" style="background-image: url('./assets/img/co-miu-ben-doi-bong-vui.png')">
-      </div>
-    </div>
-
-    <!-- Control -->
-    <div class="control control-grid">
-      <div class="control-group-left">
-        <div class="btn btn-repeat">
-          <i class="fas fa-redo"></i>
-        </div>
-        <div class="btn btn-prev">
-          <i class="fas fa-step-backward"></i>
-        </div>
-      </div>
-      <div class="control-group-middle">
-        <div class="btn btn-toggle-play">
-          <i class="fas fa-pause icon-pause"></i>
-          <i class="fas fa-play icon-play"></i>
-        </div>
-      </div>
-      <div class="control-group-right">
-        <div class="btn btn-next">
-          <i class="fas fa-step-forward"></i>
-        </div>
-        <div class="btn btn-random">
-          <i class="fas fa-random"></i>
-        </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>~SpotiMiu~</title>
+  <link rel="icon" href = 
+  "./assets/img/mai-4-YBg1KLKp6vHxOE4G.png" 
+          type = "image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+</head>
+<body>
+  <div class="player">
+    <!-- Dashboard -->
+    <div class="dashboard">
+      <!-- Header -->
+      <header>
+        <h1>SpotiMiu</h1>
+        <h4>Now playing:</h4>
+        <h2>Có em bên đời bỗng vui</h2>
+      </header>
   
-        
+      <!-- CD -->
+      <div class="cd">
+        <div class="cd-thumb" style="background-image: url('./assets/img/co-miu-ben-doi-bong-vui.png')">
+        </div>
       </div>
-    </div>
-
-    <div class="control control-volume-group">
-      <div class="btn btn-volume">
-        <i class="fas fa-volume-up"></i>
-        <input id="progress-volume" class="progress progress-volume" type="range" value="0" step="1" min="0" max="100">
+  
+      <!-- Control -->
+      <div class="control control-grid">
+        <div class="control-group-left">
+          <div class="btn btn-repeat">
+            <i class="fas fa-redo"></i>
+          </div>
+          <div class="btn btn-prev">
+            <i class="fas fa-step-backward"></i>
+          </div>
+        </div>
+        <div class="control-group-middle">
+          <div class="btn btn-toggle-play">
+            <i class="fas fa-pause icon-pause"></i>
+            <i class="fas fa-play icon-play"></i>
+          </div>
+        </div>
+        <div class="control-group-right">
+          <div class="btn btn-next">
+            <i class="fas fa-step-forward"></i>
+          </div>
+          <div class="btn btn-random">
+            <i class="fas fa-random"></i>
+          </div>
+    
+          
+        </div>
       </div>
+  
+      <div class="control control-volume-group">
+        <div class="btn btn-volume">
+          <i class="fas fa-volume-up"></i>
+          <input id="progress-volume" class="progress progress-volume" type="range" value="0" step="1" min="0" max="100">
+        </div>
+      </div>
+      <input id="progress" class="progress" type="range" value="0" step="1" min="0" max="100">
+  
+  
+      <audio id="audio" src=""></audio>
     </div>
-    <input id="progress" class="progress" type="range" value="0" step="1" min="0" max="100">
-
-
-    <audio id="audio" src=""></audio>
+    <!-- Playlist -->
+    <div class="playlist"></div>
+    <div class="btn-love">
+      <i class="fas fa-heart"></i>
+    </div>
   </div>
-
-  <!-- Playlist -->
-  <div class="playlist"></div>
-</div>
-<script src="./assets/js/main.js"></script>
+  <script src="./assets/js/main.js"></script>
+</body>
+</html>
 
 
 <!-- Design from: https://static.collectui.com/shots/3671744/musicloud-revolutionary-app-for-music-streaming-large -->
