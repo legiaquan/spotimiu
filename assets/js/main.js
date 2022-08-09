@@ -17,6 +17,7 @@ const randomBtn = $('.btn-random');
 const repeatBtn = $('.btn-repeat');
 const volume = $('#progress-volume');
 const iconVolume = $(".control-volume-group .btn-volume i");
+const btnLove = $(".btn-love");
 
 
 const app = {
@@ -280,6 +281,12 @@ const app = {
             _this.changeVolume(e.target.value / 100);
         }
 
+        btnLove.onclick = function() {
+            let audioMissYou = new Audio();
+            audioMissYou.src = "./assets/musics/miss-you.mp4";
+            audioMissYou.play();
+        }
+
         // add event key up
         onkeyup = (event) => {
             if(event.code === "Space") {
@@ -354,6 +361,7 @@ const app = {
         this.loadCurrentSong();
     },
     changeVolume: function(value) {
+        value = parseFloat(value);
         this.setConfig('volume', value);
         audio.volume = value;
         let isMute = value == 0 ? true : false;
