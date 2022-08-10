@@ -265,6 +265,7 @@ const app = {
             if(songNode || e.target.closest('.option')) {
                 if(songNode) {
                     _this.currentIndex = Number(songNode.dataset.index);
+                    _this.setConfig('currentIndex', _this.currentIndex);
                     _this.loadCurrentSong();
                     _this.render();
                     audio.play();
@@ -317,6 +318,7 @@ const app = {
     },
     nextSong : function() {
         this.currentIndex++;
+        this.setConfig('currentIndex', this.currentIndex);
         if(this.currentIndex >= this.songs.length) {
             this.currentIndex = 0;
         }
@@ -334,6 +336,7 @@ const app = {
     },
     prevSong: function() {
         this.currentIndex--;
+        this.setConfig('currentIndex', this.currentIndex);
         if(this.currentIndex < 0) {
             this.currentIndex = this.songs.length - 1;
         }
@@ -371,6 +374,7 @@ const app = {
         this.isRandom = this.config.isRandom;
         this.isRepeat = this.config.isRepeat;
         this.volume = this.config.volume;
+        this.currentIndex = this.config.currentIndex ?? 0;
     },
     updateTitle : function(title) {
         document.title = `♥ SpotiMiu ♥ ${title}`;
