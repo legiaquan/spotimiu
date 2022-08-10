@@ -1,0 +1,25 @@
+{
+  "name": "spotimiu.github.io",
+  "version": "1.0.0",
+  "description": "Nghe nhạc thoai~~~",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/quanle51297/spotimiu.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/quanle51297/spotimiu/issues"
+  },
+  "homepage": "https://github.com/quanle51297/spotimiu#readme",
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-livereload": "^4.0.2",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.54.4"
+  }
+}
