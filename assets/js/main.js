@@ -18,7 +18,7 @@ const repeatBtn = $('.btn-repeat');
 const volume = $('#progress-volume');
 const iconVolume = $(".control-volume-group .btn-volume i");
 const btnLove = $(".btn-love");
-
+const audioMissYou = $('#audioMissYou');
 
 const app = {
     currentIndex : 0,
@@ -282,8 +282,6 @@ const app = {
         }
 
         btnLove.onclick = function() {
-            let audioMissYou = new Audio();
-            audioMissYou.src = "./assets/musics/miss-you.mp4";
             audioMissYou.play();
         }
 
