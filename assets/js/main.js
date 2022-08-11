@@ -19,6 +19,8 @@ const volume = $('#progress-volume');
 const iconVolume = $(".control-volume-group .btn-volume i");
 const btnLove = $(".btn-love");
 const audioMissYou = $('#audioMissYou');
+const appleTouchIcon = $('link[rel="apple-touch-icon"]');
+const fluidIcon = $('link[rel="fluid-icon"]');
 
 const app = {
     currentIndex : 0,
@@ -314,6 +316,8 @@ const app = {
         cdThumb.style.backgroundImage = `url('${this.currentSong.image}')`;
         audio.src = this.currentSong.path;
         this.updateTitle(this.currentSong.name);
+        appleTouchIcon.href = this.currentSong.image;
+        fluidIcon.href = this.currentSong.image;
 
     },
     nextSong : function() {
