@@ -90,6 +90,12 @@ const app = {
             image: "./assets/img/hen-uoc-tu-hu-vo.png"
         },
         {
+            name: "CHƯA QUÊN NGƯỜI YÊU CŨ",
+            singer: "HÀ NHI X HỨA KIM TUYỀN",
+            path: "./assets/musics/CHUA-QUEN-NGUOI-YEU-CU_HA-NHIxHUA-KIM-TUYEN.mp3",
+            image: "./assets/img/CHUA-QUEN-NGUOI-YEU-CU_HA-NHIxHUA-KIM-TUYEN.jpg"
+        },
+        {
             name: "Ing...  (Now, We Are Breaking Up Ost)",
             singer: "Lee MinHyuk, Boramiyu",
             path: "./assets/musics/IngNowWeAreBreakingUpOst-LeeMinHyukBoramiyu-7128102.mp3",
@@ -136,6 +142,12 @@ const app = {
             singer: "Y Cách Tái Thính (Yi Ge Sai Ting)",
             path: "./assets/musics/TrichTien-YCachTaiThinhYiGeSaiTingDiepLy-6272323.mp3",
             image: "./assets/img/trich-tien.png"
+        },
+        {
+            name: "Đào Hoa Nặc / 桃花诺 (Thượng Cổ Tình Ca OST)",
+            singer: "G.E.M (Đặng Tử Kỳ)",
+            path: "./assets/musics/DaoHoaNacThuongCoTinhCaOST-GEMDangTuKy-5011028.mp3",
+            image: "./assets/img/dao-hoa-nac.jpg"
         },
     ],
 
